@@ -1,19 +1,16 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
-trigger:
-- master
-
-pool:
-  vmImage: 'ubuntu-latest'
-
+resources:
+- repo: self
+queue:
+  name: Hosted VS2017
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: AzureResourceGroupDeployment@2
+  inputs:
+    azureSubscription: 'Pay-As-You-Go(889acb63-3714-4edc-bfce-8f54f2c07c00)'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'embersilk-sf-rg'
+    location: 'East US'
+    templateLocation: 'Linked artifact'
+    csmFile: 'template.json'
+    csmParametersFile: 'parameters.json'
+    deploymentMode: 'Incremental'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
