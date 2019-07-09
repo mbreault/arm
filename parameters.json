@@ -1,0 +1,78 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "clusterName": {
+            "value": "embersilk-sf"
+        },
+        "clusterLocation": {
+            "value": "eastus"
+        },
+        "computeLocation": {
+            "value": "eastus"
+        },
+        "adminUserName": {
+            "value": "VAR_USERNAME"
+        },
+        "adminPassword": {
+            "value": "VAR_PASSWORD"
+        },
+        "nicName": {
+            "value": "NIC-embersilk-sf"
+        },
+        "publicIPAddressName": {
+            "value": "embersilk-sf-PubIP"
+        },
+        "dnsName": {
+            "value": "embersilk-sf"
+        },
+        "virtualNetworkName": {
+            "value": "VNet-embersilk-sf"
+        },
+        "lbName": {
+            "value": "LB-embersilk-sf"
+        },
+        "lbIPName": {
+            "value": "LBIP-embersilk-sf"
+        },
+        "applicationDiagnosticsStorageAccountName": {
+            "value": "sfdgembersilksf2123"
+        },
+        "supportLogStorageAccountName": {
+            "value": "sflogsembersilksf7848"
+        },
+        "sourceVaultValue": {
+            "value": "/subscriptions/889acb63-3714-4edc-bfce-8f54f2c07c00/resourcegroups/embersilk-keyvault-rg/providers/Microsoft.KeyVault/vaults/embersilk-keyvault"
+        },
+        "certificateUrlValue": {
+            "value": "https://embersilk-keyvault.vault.azure.net/secrets/20190704-embersilk-kv/4452194c4bc5409290b1979585ee580a"
+        },
+        "certificateThumbprint": {
+            "value": "D11FC9C46D79D48B306FC5053F565BA2334EC07D"
+        },
+        "vmImageSku": {
+            "value": "2016-Datacenter"
+        },
+        "vmImageOffer": {
+            "value": "WindowsServer"
+        },
+        "nt0ephemeralStartPort": {
+            "value": 49152
+        },
+        "nt0ephemeralEndPort": {
+            "value": 65534
+        },
+        "nt0applicationStartPort": {
+            "value": 20000
+        },
+        "nt0applicationEndPort": {
+            "value": 30000
+        },
+        "nt0fabricTcpGatewayPort": {
+            "value": 19000
+        },
+        "nt0fabricHttpGatewayPort": {
+            "value": 19080
+        }
+    }
+}
