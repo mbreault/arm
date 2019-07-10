@@ -73,6 +73,9 @@
         },
         "nt0fabricHttpGatewayPort": {
             "value": 19080
+        },
+        "imageName": {
+            "value" : "empty"
         }
     }
 }

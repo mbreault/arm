@@ -239,6 +239,10 @@
         "vmNodeType0Size": {
             "type": "string",
             "defaultValue": "Standard_D2s_v3"
+        },
+        "imageName": {
+            "type": "string",
+            "defaultValue": ""
         }
     },
     "variables": {
@@ -248,6 +252,7 @@
         "vNetApiVersion": "2015-06-15",
         "storageApiVersion": "2016-01-01",
         "publicIPApiVersion": "2015-06-15",
+        "imageReference" : "[resourceId('Microsoft.Compute/images',parameters('imageName'))]",
         "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
         "subnet0Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet0Name'))]",
         "lbID0": "[resourceId('Microsoft.Network/loadBalancers', concat('LB','-', parameters('clusterName'),'-',parameters('vmNodeType0Name')))]",
@@ -586,7 +591,7 @@
                     },
                     "storageProfile": {
                         "imageReference": {
-                            "id":"/subscriptions/889acb63-3714-4edc-bfce-8f54f2c07c00/resourceGroups/EMB-MANAGED-IMAGE-RG/providers/Microsoft.Compute/images/myPackerImage"
+                            "id": "[variables('imageReference')]"
                          },
                         "osDisk": {
                             "caching": "ReadOnly",
