@@ -13,4 +13,4 @@ steps:
     csmFile: 'template.json'
     csmParametersFile: 'parameters.json'
     deploymentMode: 'Incremental'
-    overrideParameters: '-adminPassword "$(admin_password)" -adminUserName "$(admin_username)" -imageName "$(imageName)" -imageResourceGroupName "$(imageName)"'
+    overrideParameters: '-adminPassword "$(admin_password)" -adminUserName "$(admin_username)" -imageName "$(imageName)" -imageResourceGroupName "$(imageResourceGroupName)"'
