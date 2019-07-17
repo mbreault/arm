@@ -76,6 +76,9 @@
         },
         "imageName": {
             "value" : "empty"
+        },
+        "imageResourceGroupName": {
+            "value" : "empty"
         }
     }
 }

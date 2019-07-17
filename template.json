@@ -243,6 +243,9 @@
         "imageName": {
             "type": "string",
             "defaultValue": ""
+        },
+        "imageResourceGroupName": {
+            "value" : "empty"
         }
     },
     "variables": {
@@ -252,7 +255,7 @@
         "vNetApiVersion": "2015-06-15",
         "storageApiVersion": "2016-01-01",
         "publicIPApiVersion": "2015-06-15",
-        "imageReference" : "[resourceId('Microsoft.Compute/images',parameters('imageName'))]",
+        "imageReference" : "[resourceId(parameters('imageResourceGroupName'),'Microsoft.Compute/images',parameters('imageName'))]",
         "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
         "subnet0Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet0Name'))]",
         "lbID0": "[resourceId('Microsoft.Network/loadBalancers', concat('LB','-', parameters('clusterName'),'-',parameters('vmNodeType0Name')))]",
