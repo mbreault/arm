@@ -246,7 +246,7 @@
         },
         "imageResourceGroupName": {
             "type": "string",
-            "value" : "empty"
+            "defaultValue" : ""
         }
     },
     "variables": {
