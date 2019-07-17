@@ -245,6 +245,7 @@
             "defaultValue": ""
         },
         "imageResourceGroupName": {
+            "type": "string",
             "value" : "empty"
         }
     },
