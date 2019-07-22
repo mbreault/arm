@@ -480,7 +480,7 @@
                                         "clusterEndpoint": "[reference(parameters('clusterName')).clusterEndpoint]",
                                         "nodeTypeRef": "[parameters('vmNodeType0Name')]",
                                         "dataPath": "D:\\\\SvcFab",
-                                        "durabilityLevel": "Bronze",
+                                        "durabilityLevel": "Silver",
                                         "enableParallelJobs": true,
                                         "nicPrefixOverride": "[parameters('subnet0Prefix')]",
                                         "certificate": {
