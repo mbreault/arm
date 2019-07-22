@@ -226,7 +226,7 @@
         },
         "nt0InstanceCount": {
             "type": "int",
-            "defaultValue": 3,
+            "defaultValue": 5,
             "metadata": {
                 "description": "Instance count for node type"
             }
@@ -663,7 +663,7 @@
                             "startPort": "[parameters('nt0applicationStartPort')]"
                         },
                         "clientConnectionEndpointPort": "[parameters('nt0fabricTcpGatewayPort')]",
-                        "durabilityLevel": "Bronze",
+                        "durabilityLevel": "Silver",
                         "ephemeralPorts": {
                             "endPort": "[parameters('nt0ephemeralEndPort')]",
                             "startPort": "[parameters('nt0ephemeralStartPort')]"
